@@ -1,0 +1,1276 @@
+{
+    "name" : "이기성",
+    "age" : 33,
+    "gender" : "남",
+    "transaction" : [
+        {
+            "year" : 2019,
+            "month" : 1, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 30450,
+                    "normal" : 0,
+                    "public_transport" : 30450,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 1072401,
+                    "normal" : 1072401,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 139160,
+                    "normal" : 139160,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2019,
+            "month" : 2, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 278950,
+                    "normal" : 191800,
+                    "public_transport" : 87150,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 804355,
+                    "normal" : 804355,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 139160,
+                    "normal" : 139160,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2019,
+            "month" : 3, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 713070,
+                    "normal" : 650470,
+                    "public_transport" : 62600,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 1280600,
+                    "normal" : 1280600,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 139160,
+                    "normal" : 139160,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2019,
+            "month" : 4, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 333400,
+                    "normal" : 270450,
+                    "public_transport" : 62950,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 556720,
+                    "normal" : 516920,
+                    "public_transport" : 39800,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 140660,
+                    "normal" : 140660,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2019,
+            "month" :5, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 486920,
+                    "normal" : 418520,
+                    "public_transport" : 68400,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 326250,
+                    "normal" : 326250,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 290560,
+                    "normal" : 201560,
+                    "public_transport" : 0,
+                    "cultural_cost" : 89000,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2019,
+            "month" : 6, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 287170,
+                    "normal" : 284220,
+                    "public_transport" : 2950,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 422840,
+                    "normal" : 422840,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 165030,
+                    "normal" : 165030,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2019,
+            "month" : 7, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 308670,
+                    "normal" : 262770,
+                    "public_transport" : 12900,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 33000
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 470340,
+                    "normal" : 470340,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 139160,
+                    "normal" : 139160,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2019,
+            "month" : 8, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 309022,
+                    "normal" : 309022,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 544470,
+                    "normal" : 514470,
+                    "public_transport" : 0,
+                    "cultural_cost" : 30000,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 145370,
+                    "normal" : 145370,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2019,
+            "month" : 9, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 658710,
+                    "normal" : 655760,
+                    "public_transport" : 2950,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 512040,
+                    "normal" : 512040,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 206160,
+                    "normal" : 206160,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2019,
+            "month" : 10, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 299235,
+                    "normal" : 299235,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 613081,
+                    "normal" : 613081,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 242260,
+                    "normal" : 242260,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2019,
+            "month" : 11, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 396000,
+                    "normal" : 393500,
+                    "public_transport" : 2500,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 543250,
+                    "normal" : 543250,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 482060,
+                    "normal" : 482060,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2019,
+            "month" : 12, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 2800,
+                    "normal" : 300,
+                    "public_transport" : 2500,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 837030,
+                    "normal" : 837030,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 252460,
+                    "normal" : 252460,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2020,
+            "month" : 1, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 303100,
+                    "normal" : 298900,
+                    "public_transport" : 4200,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 1288422,
+                    "normal" : 1288422,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 378420,
+                    "normal" : 378420,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2020,
+            "month" : 2, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 151700,
+                    "normal" : 151700,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 1197300,
+                    "normal" : 1197300,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 217505,
+                    "normal" : 217505,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2020,
+            "month" : 3, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 280000,
+                    "normal" : 280000,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 1129460,
+                    "normal" : 1129460,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 298060,
+                    "normal" : 298060,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2020,
+            "month" : 4, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 262190,
+                    "normal" : 262190,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 1509350,
+                    "normal" : 1509350,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 187273,
+                    "normal" : 187273,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2020,
+            "month" : 5, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 549700,
+                    "normal" : 549700,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 1294926,
+                    "normal" : 1294926,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 438376,
+                    "normal" : 438376,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2020,
+            "month" : 6, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 936870,
+                    "normal" : 936870,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 653350,
+                    "normal" : 653350,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 195860,
+                    "normal" : 195860,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2020,
+            "month" : 7, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 367000,
+                    "normal" : 367000,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 606660,
+                    "normal" : 606660,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 132060,
+                    "normal" : 132060,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+        {
+            "year" : 2020,
+            "month" : 8, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 460120,
+                    "normal" : 460120,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 819910,
+                    "normal" : 819910,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 147456,
+                    "normal" : 147456,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2020,
+            "month" : 9, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 680320,
+                    "normal" : 680320,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 882940,
+                    "normal" : 882940,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 166860,
+                    "normal" : 166860,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2020,
+            "month" : 10, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 390702,
+                    "normal" : 378702,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 1200
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 822520,
+                    "normal" : 822520,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 181660,
+                    "normal" : 181660,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2020,
+            "month" : 11, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 505726,
+                    "normal" : 505726,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 500591,
+                    "normal" : 500591,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 179060,
+                    "normal" : 179060,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2020,
+            "month" : 12, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 677690,
+                    "normal" : 677690,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 666272,
+                    "normal" : 666272,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 238415,
+                    "normal" : 238415,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2021,
+            "month" : 1, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 342750,
+                    "normal" : 342750,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 1375793,
+                    "normal" : 1375793,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 207680,
+                    "normal" : 207680,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2021,
+            "month" : 2, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 1150460,
+                    "normal" : 1147960,
+                    "public_transport" : 2500,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 869433,
+                    "normal" : 869433,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 303160,
+                    "normal" : 303160,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2021,
+            "month" : 3, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 397895,
+                    "normal" : 397895,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 724649,
+                    "normal" : 724649,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 160360,
+                    "normal" : 160360,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2021,
+            "month" : 4, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 95647,
+                    "normal" : 95647,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 809636,
+                    "normal" : 809636,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 187960,
+                    "normal" : 187960,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2021,
+            "month" : 5, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 183000,
+                    "normal" : 183000,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 897850,
+                    "normal" : 897850,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 150400,
+                    "normal" : 150400,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2021,
+            "month" : 6, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 543800,
+                    "normal" : 543800,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 1272908,
+                    "normal" : 1272908,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 101900,
+                    "normal" : 101900,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2021,
+            "month" : 7, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 1418872,
+                    "normal" : 1418872,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 675977,
+                    "normal" : 675977,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 163900,
+                    "normal" : 163900,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2021,
+            "month" : 8, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 26200,
+                    "normal" : 26200,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 392873,
+                    "normal" : 392873,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 265602,
+                    "normal" : 265602,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2021,
+            "month" : 9, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 592325,
+                    "normal" : 505925,
+                    "public_transport" : 0,
+                    "cultural_cost" : 86400,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 290530,
+                    "normal" : 290530,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 179622,
+                    "normal" : 179622,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2021,
+            "month" : 10, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 315820,
+                    "normal" : 315820,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 356510,
+                    "normal" : 356510,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 175400,
+                    "normal" : 175400,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2021,
+            "month" : 11, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 1314208,
+                    "normal" : 1307508,
+                    "public_transport" : 1700,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 5000
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 819972,
+                    "normal" : 784972,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 35000
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 204400,
+                    "normal" : 204400,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2021,
+            "month" : 12, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 966285,
+                    "normal" : 966285,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 84300,
+                    "normal" : 84300,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 283514,
+                    "normal" : 283514,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2022,
+            "month" : 1, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 896450,
+                    "normal" : 896450,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 124806,
+                    "normal" : 124806,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 56000,
+                    "normal" : 56000,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2022,
+            "month" : 2, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 442580,
+                    "normal" : 402580,
+                    "public_transport" : 0,
+                    "cultural_cost" : 40000,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 575500,
+                    "normal" : 575500,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 135000,
+                    "normal" : 0,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 135000
+                }
+            ]
+        },
+
+        {
+            "year" : 2022,
+            "month" : 3, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 4256400,
+                    "normal" : 4254000,
+                    "public_transport" : 2400,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 568000,
+                    "normal" : 568000,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 0,
+                    "normal" : 0,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2022,
+            "month" : 4, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 4352100,
+                    "normal" : 4352100,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 350140,
+                    "normal" : 350140,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 19800,
+                    "normal" : 19800,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        },
+
+        {
+            "year" : 2022,
+            "month" : 5, 
+            "amount" : [
+                {
+                    "type" : "신용카드",
+                    "total" : 4286300,
+                    "normal" : 4286300,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "직불카드",
+                    "total" : 645800,
+                    "normal" : 645800,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                },
+                {
+                    "type" : "현금영수증",
+                    "total" : 0,
+                    "normal" : 0,
+                    "public_transport" : 0,
+                    "cultural_cost" : 0,
+                    "traditional_market" : 0
+                }
+            ]
+        }
+    ]
+}

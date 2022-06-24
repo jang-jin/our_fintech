@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:title="Settings"
+    >
+
+
+
+
+
+    <PreferenceCategory
+        android:title="Program Settings"
+        />
+    <CheckBoxPreference
+        android:key="setting_push"
+        android:title="Push Alarm"
+        android:defaultValue="true" />
+    <EditTextPreference
+        android:key="setting_color"
+        android:title="Set Color"
+        android:defaultValue="#FFFFFF"
+        android:dialogTitle="Set Color"
+        android:inputType="text"
+        />
+
+    <PreferenceCategory
+        android:title="Another Settings"/>
+
+    <CheckBoxPreference
+        android:key="setting_push2"
+        android:title="Push Alarm2"
+        android:defaultValue="true" />
+    <EditTextPreference
+        android:key="setting_color2"
+        android:title="Set Color2"
+        android:defaultValue="#FFFFFF"
+        android:dialogTitle="Set Color"
+        android:inputType="text"
+        />
+
+</PreferenceScreen>
