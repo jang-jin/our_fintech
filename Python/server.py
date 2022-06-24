@@ -39,7 +39,7 @@ y_pred = scaler.inverse_transform(model.predict(x))
 y_pred = y_pred.astype('int')
 
 # 안드로이드 연동
-host = '192.168.1.108'  # 호스트 ip
+host = '192.168.98.49'  # 호스트 ip
 port = 8080            # 포트번호
 
 server_sock = socket.socket(socket.AF_INET) 

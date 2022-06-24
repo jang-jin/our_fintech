@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity{
 
     EditText salary;
     private Handler mHandler;
-    private String ip = "192.168.1.108";
+    private String ip = "192.168.98.49";
     private int port = 8080;
     private Socket socket;
     private DataOutputStream dos;
