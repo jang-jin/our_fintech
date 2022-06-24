@@ -19,7 +19,7 @@
         />
 
     <ImageView
-        android:id="@+id/card_char"
+        android:id="@+id/card_char1"
         android:layout_width="56dp"
         android:layout_height="73dp"
         android:layout_alignParentStart="true"
@@ -30,7 +30,7 @@
         android:src="@drawable/card_char" />
 
     <ImageView
-        android:id="@+id/speech_bubble"
+        android:id="@+id/speech_bubble1"
         android:layout_width="290dp"
         android:layout_height="91dp"
         android:layout_marginStart="60dp"
@@ -42,14 +42,58 @@
         android:id="@+id/main_total_expense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_alignLeft="@id/speech_bubble"
         android:layout_alignTop="@id/speech_bubble"
         android:layout_alignRight="@id/speech_bubble"
         android:layout_alignBottom="@id/speech_bubble"
         android:gravity="center_vertical"
         android:lineSpacingMultiplier="1.5"
+        android:paddingLeft="25dp"
+        android:textColor="#000000"
+        android:textSize="15sp" />
 
+    <TextView
+        android:id="@+id/tax_benefit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="192dp"
+        android:lineSpacingMultiplier="1.5"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/card_char2"
+        android:layout_width="56dp"
+        android:layout_height="73dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="93dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/card_char" />
+
+    <ImageView
+        android:id="@+id/speech_bubble2"
+        android:layout_width="290dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="80dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/speech_bubble"/>
+
+    <TextView
+        android:id="@+id/main_tax_benefit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/speech_bubble2"
+        android:layout_alignTop="@id/speech_bubble2"
+        android:layout_alignRight="@id/speech_bubble2"
+        android:layout_alignBottom="@id/speech_bubble2"
+        android:gravity="center_vertical"
+        android:lineSpacingMultiplier="1.5"
         android:paddingLeft="25dp"
         android:textColor="#000000"
         android:textSize="15sp" />

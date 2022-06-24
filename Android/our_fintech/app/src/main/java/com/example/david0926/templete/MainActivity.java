@@ -57,6 +57,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         String main_total_expense_text = "제가 " + "장진" + "님의 카드 내역을 통해 분석한\n올해 지출 예상금액은 약 " + "123" + "만원입니다.";
         main_total_expense.setText(main_total_expense_text);
 
+        // 신용카드 기준 세제혜택
+        TextView main_tax_benefit = (TextView)findViewById(R.id.tax_benefit);
+        String main_tax_benefit_text = "위 금액을 신용카드로 사용했을 때\n올해 세제혜택은 " + "23" + "만원입니다.";
+        main_tax_benefit.setText(main_tax_benefit_text);
+
 //        //Toolbar
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        toolbar.setTitleTextColor(Color.WHITE);
