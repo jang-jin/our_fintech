@@ -22,12 +22,14 @@ import java.net.Socket;
 public class LoginActivity extends AppCompatActivity{
 
     EditText salary;
+    EditText name;
     private Handler mHandler;
-    private String ip = "192.168.98.49";
+    private String ip = "192.168.98.16";
     private int port = 8080;
     private Socket socket;
     private DataOutputStream dos;
     private DataInputStream dis;
+    private String results;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,11 +44,14 @@ public class LoginActivity extends AppCompatActivity{
 
         switch (view.getId()){
             case R.id.btn_login:
+                name = findViewById(R.id.name);
                 salary = findViewById(R.id.salary);
-                connect(salary.getText().toString());
+                Log.w("서버", "1");
+                connect(name.getText().toString() + "?" + salary.getText().toString());
 //                password = findViewById(R.id.login_password);
 //                Toast.makeText(this, "Hello, "+salary.getText().toString()+"!", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+//                Log.w("서버에서 받아온 값2", ""+ results);
+//                startActivity(new Intent(LoginActivity.this, MainActivity.class));
                 break;
 //            case R.id.btn_newaccount:
 //                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
@@ -55,7 +60,7 @@ public class LoginActivity extends AppCompatActivity{
         }
     }
 
-    void connect(String salary_value){
+    void connect(String values){
         mHandler = new Handler();
         Thread checkUpdate = new Thread(){
             public void run(){
@@ -70,7 +75,7 @@ public class LoginActivity extends AppCompatActivity{
                 try{
                     dos = new DataOutputStream(socket.getOutputStream());
                     dis = new DataInputStream(socket.getInputStream());
-                    dos.writeUTF(salary_value);
+                    dos.writeUTF(values);
                 } catch (IOException e){
                     e.printStackTrace();
                     Log.w("서버", "버퍼 생성 잘못됨");
@@ -81,14 +86,17 @@ public class LoginActivity extends AppCompatActivity{
 //                    String line = (String)dis.readUTF();
                     byte[] buf = new byte[100];
                     int read_byte = dis.read(buf);
-                    String expenses = new String(buf, 0, read_byte);
+                    results = new String(buf, 0, read_byte);
 //                    Log.w("서버에서 받아온 값", ""+line);
-                    Log.w("서버에서 받아온 값", ""+expenses);
+                    Log.w("서버에서 받아온 값1", ""+ results);
+
+                    Intent LoginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                    LoginIntent.putExtra("결과",results);
+                    startActivity(LoginIntent);
                 } catch (Exception e){
                 }
             }
         };
         checkUpdate.start();
-
     }
 }

@@ -27,7 +27,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -37,11 +40,44 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Animation in = new AlphaAnimation(0.0f, 1.0f);
+        ArrayList<Animation> in_list = new ArrayList<Animation>();
+        int t = 0;
+        int step_t = 0;
+        for(int i = 0; i < 10; i++){
+            Animation in = new AlphaAnimation(0.0f, 1.0f);
+            if(i == 1 || i == 4 || i == 8){
+                step_t = 1000;
+
+            }else{
+                step_t = 3000;
+            }
+            in.setDuration(step_t);
+            in.setStartOffset(t);
+            in_list.add(in);
+            t += step_t;
+        }
+
+        // 데이터 받아오기
+        Intent MainIntent = getIntent();
+        String results = MainIntent.getStringExtra("결과");
+        String[] results_list = results.split("-");
+        results_list[1] = Integer.toString(Integer.parseInt(results_list[1]) / 10000);
+        results_list[2] = Integer.toString(Integer.parseInt(results_list[2]) / 10000);
+
+        for(int i = 1; i < results_list.length; i++){
+            int step = results_list[i].length() / 3;
+            int start_index = results_list[i].length() % 3;
+            for(int j = step-1; j >= 0; j--){
+                if(start_index == 0 && j == 0){
+                    break;
+                }
+                results_list[i] = results_list[i].substring(0, start_index+3*j) + "," + results_list[i].substring(start_index+3*j);
+            }
+        }
 
         // 총급여
         TextView main_salary = (TextView)findViewById(R.id.main_salary);
-        String main_salary_text = "장진" + "님의 연봉은 " + "2000" + " 만원입니다.";
+        String main_salary_text = results_list[0] + "님의 연봉은 " + results_list[1] + " 만원입니다.";
         int main_salary_text_start = main_salary_text.indexOf("님의 연봉은 ") + 7;
         int main_salary_text_end = main_salary_text.indexOf(" 만원입니다.");
         SpannableString main_salary_spannable = new SpannableString(main_salary_text);
@@ -49,18 +85,87 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         main_salary_spannable.setSpan(new StyleSpan(Typeface.BOLD), main_salary_text_start, main_salary_text_end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         main_salary_spannable.setSpan(new RelativeSizeSpan(1.3f), main_salary_text_start, main_salary_text_end, SpannableString.SPAN_EXCLUSIVE_EXCLUSIVE);
         main_salary.setText(main_salary_spannable);
-        in.setDuration(3000);
-        main_salary.startAnimation(in);
+        main_salary.startAnimation(in_list.get(0));
 
         // 올해 사용할 예측금액
+        ImageView card_char1 = (ImageView) findViewById((R.id.card_char1));
+        ImageView speech_bubble1 = (ImageView) findViewById((R.id.speech_bubble1));
+        card_char1.startAnimation(in_list.get(1));
+        speech_bubble1.startAnimation(in_list.get(1));
+
         TextView main_total_expense = (TextView)findViewById(R.id.main_total_expense);
-        String main_total_expense_text = "제가 " + "장진" + "님의 카드 내역을 통해 분석한\n올해 지출 예상금액은 약 " + "123" + "만원입니다.";
+        String main_total_expense_text = "제가 " + results_list[0] + "님의 카드 내역을 통해 분석한\n올해 지출 예상금액은 약 " + results_list[2] + "만원입니다.";
         main_total_expense.setText(main_total_expense_text);
+        main_total_expense.startAnimation(in_list.get(2));
 
         // 신용카드 기준 세제혜택
-        TextView main_tax_benefit = (TextView)findViewById(R.id.tax_benefit);
-        String main_tax_benefit_text = "위 금액을 신용카드로 사용했을 때\n올해 세제혜택은 " + "23" + "만원입니다.";
-        main_tax_benefit.setText(main_tax_benefit_text);
+        TextView main_tax_benefit1 = (TextView)findViewById(R.id.main_tax_benefit1);
+        String main_tax_benefit1_text = "위 금액을 신용카드로 사용했을 때\n올해 세제혜택은 " + results_list[3] + "만원입니다.";
+        main_tax_benefit1.setText(main_tax_benefit1_text);
+        main_tax_benefit1.startAnimation(in_list.get(3));
+
+        // 알려줄게
+        ImageView card_char2 = (ImageView) findViewById((R.id.card_char2));
+        ImageView speech_bubble2 = (ImageView) findViewById((R.id.speech_bubble2));
+        card_char2.startAnimation(in_list.get(4));
+        speech_bubble2.startAnimation(in_list.get(4));
+
+        TextView main_golden_rate = (TextView)findViewById(R.id.main_golden_rate1);
+        String main_golden_rate_text = "지금부터 우리가 카드 사용 황금 비율을 알려줄게~";
+        main_golden_rate.setText(main_golden_rate_text);
+        main_golden_rate.startAnimation(in_list.get(5));
+
+        // 연말 사용 예측 금액
+        TextView main_predict_expense1 = (TextView)findViewById(R.id.main_predict_expense1);
+        TextView main_predict_expense2 = (TextView)findViewById(R.id.main_predict_expense2);
+        String main_predict_expense2_text = results_list[4] + "원";
+        main_predict_expense2.setText(main_predict_expense2_text);
+        main_predict_expense1.startAnimation(in_list.get(6));
+        main_predict_expense2.startAnimation(in_list.get(6));
+
+        // 황금비율
+        TextView main_golden_rate2 = (TextView)findViewById(R.id.main_golden_rate2);
+
+        TextView main_golden_rate_month_cc1 = (TextView)findViewById(R.id.main_golden_rate_month_cc1);
+        TextView main_golden_rate_month_cc2 = (TextView)findViewById(R.id.main_golden_rate_month_cc2);
+        String main_golden_rate_month_cc2_text = results_list[5] + "원";
+        main_golden_rate_month_cc2.setText(main_golden_rate_month_cc2_text);
+
+        TextView main_golden_rate_month_dc1 = (TextView)findViewById(R.id.main_golden_rate_month_dc1);
+        TextView main_golden_rate_month_dc2 = (TextView)findViewById(R.id.main_golden_rate_month_dc2);
+        String main_golden_rate_month_dc2_text = results_list[6] + "원";
+        main_golden_rate_month_dc2.setText(main_golden_rate_month_dc2_text);
+
+        TextView main_golden_rate_year_cc1 = (TextView)findViewById(R.id.main_golden_rate_year_cc1);
+        TextView main_golden_rate_year_cc2 = (TextView)findViewById(R.id.main_golden_rate_year_cc2);
+        String main_golden_rate_year_cc2_text = results_list[7] + "원";
+        main_golden_rate_year_cc2.setText(main_golden_rate_year_cc2_text);
+
+        TextView main_golden_rate_year_dc1 = (TextView)findViewById(R.id.main_golden_rate_year_dc1);
+        TextView main_golden_rate_year_dc2 = (TextView)findViewById(R.id.main_golden_rate_year_dc2);
+        String main_golden_rate_year_dc2_text = results_list[8] + "원";
+        main_golden_rate_year_dc2.setText(main_golden_rate_year_dc2_text);
+
+        main_golden_rate2.startAnimation(in_list.get(7));
+        main_golden_rate_month_cc1.startAnimation(in_list.get(7));
+        main_golden_rate_month_cc2.startAnimation(in_list.get(7));
+        main_golden_rate_month_dc1.startAnimation(in_list.get(7));
+        main_golden_rate_month_dc2.startAnimation(in_list.get(7));
+        main_golden_rate_year_cc1.startAnimation(in_list.get(7));
+        main_golden_rate_year_cc2.startAnimation(in_list.get(7));
+        main_golden_rate_year_dc1.startAnimation(in_list.get(7));
+        main_golden_rate_year_dc2.startAnimation(in_list.get(7));
+
+        // 새로운 세제혜택
+        ImageView card_char3 = (ImageView) findViewById((R.id.card_char3));
+        ImageView speech_bubble3 = (ImageView) findViewById((R.id.speech_bubble3));
+        card_char3.startAnimation(in_list.get(8));
+        speech_bubble3.startAnimation(in_list.get(8));
+
+        TextView main_tax_benefit2 = (TextView)findViewById(R.id.main_tax_benefit2);
+        String main_tax_benefit2_text = "이대로 사용하면 " + results_list[9] + "원 개이득이지롱~";
+        main_tax_benefit2.setText(main_tax_benefit2_text);
+        main_tax_benefit2.startAnimation(in_list.get(9));
 
 //        //Toolbar
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

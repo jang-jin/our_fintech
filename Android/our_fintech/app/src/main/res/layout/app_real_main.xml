@@ -42,10 +42,10 @@
         android:id="@+id/main_total_expense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/speech_bubble"
-        android:layout_alignTop="@id/speech_bubble"
-        android:layout_alignRight="@id/speech_bubble"
-        android:layout_alignBottom="@id/speech_bubble"
+        android:layout_alignLeft="@id/speech_bubble1"
+        android:layout_alignTop="@id/speech_bubble1"
+        android:layout_alignRight="@id/speech_bubble1"
+        android:layout_alignBottom="@id/speech_bubble1"
         android:gravity="center_vertical"
         android:lineSpacingMultiplier="1.5"
         android:paddingLeft="25dp"
@@ -53,7 +53,7 @@
         android:textSize="15sp" />
 
     <TextView
-        android:id="@+id/tax_benefit"
+        android:id="@+id/main_tax_benefit1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -71,7 +71,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="93dp"
+        android:layout_marginTop="280dp"
         android:scaleType="fitXY"
         android:src="@drawable/card_char" />
 
@@ -80,18 +80,193 @@
         android:layout_width="290dp"
         android:layout_height="91dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="267dp"
         android:scaleType="fitXY"
         android:src="@drawable/speech_bubble"/>
 
     <TextView
-        android:id="@+id/main_tax_benefit"
+        android:id="@+id/main_golden_rate1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/speech_bubble2"
         android:layout_alignTop="@id/speech_bubble2"
         android:layout_alignRight="@id/speech_bubble2"
         android:layout_alignBottom="@id/speech_bubble2"
+        android:gravity="center_vertical"
+        android:lineSpacingMultiplier="1.5"
+        android:paddingLeft="25dp"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/main_predict_expense1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="379dp"
+        android:lineSpacingMultiplier="1.5"
+        android:text="연말 사용 예측 금액"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/main_predict_expense2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="379dp"
+        android:layout_marginEnd="80dp"
+        android:lineSpacingMultiplier="1.5"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/main_golden_rate2"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="420dp"
+        android:layout_marginEnd="80dp"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.5"
+        android:text="황금 비율"
+        android:textColor="#FFBB00"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/main_golden_rate_month_cc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="460dp"
+        android:lineSpacingMultiplier="1.5"
+        android:text="신용카드(월 사용액 기준)"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/main_golden_rate_month_cc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="460dp"
+        android:layout_marginEnd="80dp"
+        android:lineSpacingMultiplier="1.5"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/main_golden_rate_month_dc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_golden_rate_month_cc1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="10dp"
+        android:lineSpacingMultiplier="1.5"
+        android:text="체크카드(월 사용액 기준)"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/main_golden_rate_month_dc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_golden_rate_month_cc2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="80dp"
+        android:lineSpacingMultiplier="1.5"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/main_golden_rate_year_cc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_golden_rate_month_dc1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="10dp"
+        android:lineSpacingMultiplier="1.5"
+        android:text="신용카드(연 사용액 기준)"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/main_golden_rate_year_cc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_golden_rate_month_dc2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="80dp"
+        android:lineSpacingMultiplier="1.5"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/main_golden_rate_year_dc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_golden_rate_year_cc1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="10dp"
+        android:lineSpacingMultiplier="1.5"
+        android:text="체크카드(연 사용액 기준)"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/main_golden_rate_year_dc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_golden_rate_year_cc2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="80dp"
+        android:lineSpacingMultiplier="1.5"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/card_char3"
+        android:layout_width="56dp"
+        android:layout_height="73dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="600dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/card_char" />
+
+    <ImageView
+        android:id="@+id/speech_bubble3"
+        android:layout_width="290dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="587dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/speech_bubble"/>
+
+    <TextView
+        android:id="@+id/main_tax_benefit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/speech_bubble3"
+        android:layout_alignTop="@id/speech_bubble3"
+        android:layout_alignRight="@id/speech_bubble3"
+        android:layout_alignBottom="@id/speech_bubble3"
         android:gravity="center_vertical"
         android:lineSpacingMultiplier="1.5"
         android:paddingLeft="25dp"

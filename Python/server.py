@@ -6,47 +6,20 @@ from sklearn.preprocessing import MinMaxScaler
 from tensorflow.keras.models import load_model
 
 # json 파일 가져오기
-with open("jin.json", "r", encoding="utf-8") as json_file:
+with open("data.json", "r", encoding="utf-8") as json_file:
     json_data = json.load(json_file)
-
-# json 읽어와 데이터프레임으로 저장
-data = []
-for j in json_data['transaction']:
-    sample = {'year':j['year'], 'month':j['month']}
-    for a in j['amount']:
-        sample[f"{a['type']}_total"] = a['total']
-        sample[f"{a['type']}_normal"] = a['normal']
-        sample[f"{a['type']}_public_transport"] = a['public_transport']
-        sample[f"{a['type']}_cultural_cost"] = a['cultural_cost']
-        sample[f"{a['type']}_traditional_market"] = a['traditional_market']
-    data.append(sample)
-data = pd.DataFrame(data)
-data['total'] = data['신용카드_total'] + data['직불카드_total'] + data['현금영수증_total']
-
-# 지출금액 예측을 위한 전처리
-time_step = 12
-
-scaler = MinMaxScaler()
-scaler.fit(data[['total']])
-x = scaler.transform(data.iloc[-time_step:,-1:].values)
-x = x.reshape(1, time_step, 1)
 
 # 인공지능 모델 불러오기
 model = load_model('./model/model.h5')
 
-# 예측결과
-y_pred = scaler.inverse_transform(model.predict(x))
-y_pred = y_pred.astype('int')
-
 # 안드로이드 연동
-host = '192.168.98.49'  # 호스트 ip
+host = '192.168.98.16'  # 호스트 ip
 port = 8080            # 포트번호
 
 server_sock = socket.socket(socket.AF_INET) 
 server_sock.bind((host, port)) 
 server_sock.listen(1) 
 print("기다리는 중")
-out_data = int(1122332211)
 
 client_sock, addr = server_sock.accept()
 if client_sock:
@@ -54,9 +27,43 @@ if client_sock:
     in_data = client_sock.recv(1024)
     print(in_data.decode("utf-8"), len(in_data)) 
 
-    salary = int(in_data.decode("utf-8")[2:])
+    id_name, salary = in_data.decode("utf-8")[2:].split('?')
+    salary = int(salary)
+    print("name : ", id_name)
     print("salary : ", salary)
 
+    # 이름에 맞는 데이터 가져오기
+    for j in json_data['data_list']:
+        if j['id'] == id_name:
+            selected_data = j
+
+    # json 읽어와 데이터프레임으로 저장
+    data = []
+    for j in selected_data['transaction']:
+        sample = {'year':j['year'], 'month':j['month']}
+        for a in j['amount']:
+            sample[f"{a['type']}_total"] = a['total']
+            sample[f"{a['type']}_normal"] = a['normal']
+            sample[f"{a['type']}_public_transport"] = a['public_transport']
+            sample[f"{a['type']}_cultural_cost"] = a['cultural_cost']
+            sample[f"{a['type']}_traditional_market"] = a['traditional_market']
+        data.append(sample)
+    data = pd.DataFrame(data)
+    data['total'] = data['신용카드_total'] + data['직불카드_total'] + data['현금영수증_total']
+
+    # 지출금액 예측을 위한 전처리
+    time_step = 12
+
+    scaler = MinMaxScaler()
+    scaler.fit(data[['total']])
+    x = scaler.transform(data.iloc[-time_step:,-1:].values)
+    x = x.reshape(1, time_step, 1)
+
+    # 예측결과
+    y_pred = scaler.inverse_transform(model.predict(x))
+    y_pred = y_pred.astype('int')
+
+    # 계산
     salary *= 10000
 
     if salary >= 15000000:
@@ -134,13 +141,17 @@ if client_sock:
         income_deduction_credit_card = (total_expense - minimum_deductible_amount) * 0.15
     else:
         excess_amount = total_expense - minimum_deductible_amount - deduction_limit * 10 // 3
-        to_use_credit_card_expense = (minimum_deductible_amount + 2 * excess_amount - used_credit_card_expense)
-        to_use_debit_card_expense = (deduction_limit * 10 // 3 - excess_amount - used_debit_card_expense)
-        income_deduction = deduction_limit
-        if (total_expense - minimum_deductible_amount) * 0.15 < deduction_limit:
-            income_deduction_credit_card = (total_expense - minimum_deductible_amount) * 0.15
+        if deduction_limit * 10 // 3 < excess_amount + used_debit_card_expense:
+            to_use_credit_card_expense = total_to_use_expense
+            to_use_debit_card_expense = 0
         else:
-            income_deduction_credit_card = deduction_limit
+            to_use_credit_card_expense = (minimum_deductible_amount + 2 * excess_amount - used_credit_card_expense)
+            to_use_debit_card_expense = (deduction_limit * 10 // 3 - excess_amount - used_debit_card_expense)
+        income_deduction = deduction_limit
+        if (used_credit_card_expense + total_to_use_expense) > minimum_deductible_amount:
+            income_deduction_credit_card = min((used_credit_card_expense + total_to_use_expense - minimum_deductible_amount) * 0.15 + used_debit_card_expense * 0.30, deduction_limit)
+        else:
+            income_deduction_credit_card = min((total_expense - minimum_deductible_amount) * 0.30, deduction_limit)
 
     if salary <= 5000000:
         earned_income_amount = salary - salary * 0.70
@@ -184,10 +195,19 @@ if client_sock:
     print("실제 세제혜택 : ", round(income_deduction * tariff))
     print("카드사용금액을 전부 신용카드로만 썼을 때 세제혜택 : ", round(income_deduction_credit_card * tariff))
 
-
+    
+    out_data = "-".join(list(map(str, [selected_data['name'], 
+                         salary, 
+                         total_expense, 
+                         round(income_deduction_credit_card * tariff),
+                         total_to_use_expense,
+                         round(to_use_credit_card_expense) // remain_month,
+                         round(to_use_debit_card_expense) // remain_month,
+                         round(to_use_credit_card_expense),
+                         round(to_use_debit_card_expense),
+                         round(income_deduction * tariff)-round(income_deduction_credit_card * tariff)])))
 
     client_sock.send(str(out_data).encode('utf-8'))
-    print('send : ', out_data)
 
 client_sock.close()
 server_sock.close()
