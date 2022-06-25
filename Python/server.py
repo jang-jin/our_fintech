@@ -27,10 +27,14 @@ if client_sock:
     in_data = client_sock.recv(1024)
     print(in_data.decode("utf-8"), len(in_data)) 
 
-    id_name, salary = in_data.decode("utf-8")[2:].split('?')
-    salary = int(salary)
-    print("name : ", id_name)
-    print("salary : ", salary)
+    command = in_data.decode("utf-8")[2:].split('-')
+    id_name = command[0]
+    salary = int(command[1])
+    mode = command[2]
+    if mode == '2':
+        to_use_expense = int(command[3]) * 10000
+
+    print(command)
 
     # 이름에 맞는 데이터 가져오기
     for j in json_data['data_list']:
@@ -113,7 +117,11 @@ if client_sock:
             used_debit_card_expense += used_traditional_market_expense - 2500000
 
     total_used_expense = used_credit_card_expense + used_debit_card_expense
-    total_to_use_expense = y_pred[0, :12-remain_month].sum()
+    print(mode == '1')
+    if mode == '1':
+        total_to_use_expense = y_pred[0, :12-remain_month].sum()
+    elif mode == '2':
+        total_to_use_expense = to_use_expense
 
     total_expense = total_used_expense + total_to_use_expense
 
@@ -196,8 +204,10 @@ if client_sock:
     print("카드사용금액을 전부 신용카드로만 썼을 때 세제혜택 : ", round(income_deduction_credit_card * tariff))
 
     
-    out_data = "-".join(list(map(str, [selected_data['name'], 
-                         salary, 
+    out_data = "-".join(list(map(str, [id_name,
+                         selected_data['name'],
+                         mode,
+                         salary,
                          total_expense, 
                          round(income_deduction_credit_card * tariff),
                          total_to_use_expense,
@@ -205,8 +215,10 @@ if client_sock:
                          round(to_use_debit_card_expense) // remain_month,
                          round(to_use_credit_card_expense),
                          round(to_use_debit_card_expense),
+                         round(income_deduction * tariff),
                          round(income_deduction * tariff)-round(income_deduction_credit_card * tariff)])))
-
+    print(out_data)
+    print(str(out_data))
     client_sock.send(str(out_data).encode('utf-8'))
 
 client_sock.close()

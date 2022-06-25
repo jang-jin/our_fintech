@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity{
                 name = findViewById(R.id.name);
                 salary = findViewById(R.id.salary);
                 Log.w("서버", "1");
-                connect(name.getText().toString() + "?" + salary.getText().toString());
+                connect(name.getText().toString() + "-" + salary.getText().toString() + "-1");
 //                password = findViewById(R.id.login_password);
 //                Toast.makeText(this, "Hello, "+salary.getText().toString()+"!", Toast.LENGTH_SHORT).show();
 //                Log.w("서버에서 받아온 값2", ""+ results);
@@ -86,13 +86,15 @@ public class LoginActivity extends AppCompatActivity{
 //                    String line = (String)dis.readUTF();
                     byte[] buf = new byte[100];
                     int read_byte = dis.read(buf);
+                    Log.w("서버", ""+read_byte);
                     results = new String(buf, 0, read_byte);
 //                    Log.w("서버에서 받아온 값", ""+line);
-                    Log.w("서버에서 받아온 값1", ""+ results);
+                    Log.w("서버에서 받아온 값123", ""+ results);
 
                     Intent LoginIntent = new Intent(LoginActivity.this, MainActivity.class);
                     LoginIntent.putExtra("결과",results);
                     startActivity(LoginIntent);
+                    finish();
                 } catch (Exception e){
                 }
             }
